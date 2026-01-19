@@ -1,0 +1,47 @@
+@use "../../../app/styles/global.scss" as *;
+
+.Wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    gap: 0.75rem;
+}
+
+.Input {
+    flex: 1;
+    border-radius: 1.25rem;
+    font-family: $font-family-work-sans;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+    line-height: $line-height-sm-base;
+    letter-spacing: $letter-spacing-sm;
+    outline: 0;
+    border: 0;
+}
+
+.Primary {
+    border: 1px solid $input-border-color;
+    padding: 1rem 1.25rem;
+    color: $text-color;
+    background-color: $bg-color;
+}
+
+.Secondary {
+    padding: 1rem 1rem 1.25rem 0;
+    color: $bg-color;
+    background-color: $text-color;
+}
+
+.LeftIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PasswordIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
