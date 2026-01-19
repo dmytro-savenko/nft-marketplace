@@ -1,0 +1,52 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    font-family: $font-family-work-sans;
+    font-size: $font-size-base;
+    height: 100%;
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
