@@ -1,6 +1,11 @@
 import clsx from "clsx";
 import styles from "./Input.module.scss";
-import React, { useState, type InputHTMLAttributes } from "react";
+import React, {
+    useState,
+    type FC,
+    type InputHTMLAttributes,
+    type SVGProps,
+} from "react";
 
 type InputVariant = "Primary" | "Secondary";
 type InputType = "text" | "email" | "password";
@@ -11,8 +16,8 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     type: InputType;
     variant: InputVariant;
     placeholder?: string;
-    leftIcon?: React.ReactNode;
-    passwordIcon?: React.ReactNode;
+    LeftIcon?: FC<React.SVGProps<SVGSVGElement>>;
+    PasswordIcon?: FC<SVGProps<SVGSVGElement>>;
     passwordToggle?: boolean;
     className?: string;
 }
@@ -23,8 +28,8 @@ const Input = ({
     type,
     variant,
     placeholder,
-    leftIcon,
-    passwordIcon,
+    LeftIcon,
+    PasswordIcon,
     passwordToggle,
     className,
     ...props
@@ -38,7 +43,7 @@ const Input = ({
         : type;
     return (
         <div className={styles.Wrapper}>
-            {leftIcon && <span className={styles.LeftIcon}>{leftIcon}</span>}
+            <span className={styles.LeftIcon}>{LeftIcon && <LeftIcon />}</span>
             <input
                 type={togglePasswordVisibility}
                 className={clsx(styles.Input, styles[variant], className)}
@@ -47,14 +52,14 @@ const Input = ({
                 placeholder={placeholder}
                 {...props}
             />
-            {passwordToggle && (
+            {
                 <span
                     className={styles.PasswordIcon}
                     onClick={() => setPasswordVisibility((p) => !p)}
                 >
-                    {passwordIcon}
+                    {PasswordIcon && <PasswordIcon />}
                 </span>
-            )}
+            }
         </div>
     );
 };

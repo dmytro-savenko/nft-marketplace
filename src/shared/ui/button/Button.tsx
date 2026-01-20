@@ -11,7 +11,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     size: ButtonSize;
     leftIcon?: React.ReactNode;
     type: ButtonType;
-    onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Button = ({

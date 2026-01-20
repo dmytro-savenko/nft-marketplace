@@ -1,2 +1,2 @@
-import Button from "../ui/button/Button";
-import Input from "../ui/input/Input";
+export { default as Button } from "../ui/button/Button";
+export { default as Input } from "../ui/input/Input";
