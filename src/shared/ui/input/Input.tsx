@@ -16,7 +16,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     type: InputType;
     variant: InputVariant;
     placeholder?: string;
-    LeftIcon?: FC<React.SVGProps<SVGSVGElement>>;
+    LeftIcon?: FC<SVGProps<SVGSVGElement>>;
     PasswordIcon?: FC<SVGProps<SVGSVGElement>>;
     passwordToggle?: boolean;
     className?: string;
@@ -43,7 +43,7 @@ const Input = ({
         : type;
     return (
         <div className={styles.Wrapper}>
-            <span className={styles.LeftIcon}>{LeftIcon && <LeftIcon />}</span>
+            {LeftIcon && <LeftIcon className={styles.LeftIcon} />}
             <input
                 type={togglePasswordVisibility}
                 className={clsx(styles.Input, styles[variant], className)}
@@ -52,14 +52,14 @@ const Input = ({
                 placeholder={placeholder}
                 {...props}
             />
-            {
+            {PasswordIcon && (
                 <span
                     className={styles.PasswordIcon}
                     onClick={() => setPasswordVisibility((p) => !p)}
                 >
-                    {PasswordIcon && <PasswordIcon />}
+                    <PasswordIcon />
                 </span>
-            }
+            )}
         </div>
     );
 };

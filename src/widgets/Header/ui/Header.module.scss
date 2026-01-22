@@ -1,0 +1,32 @@
+@use "../../../app/styles/fonts" as *;
+@use "../../../app/styles/variables" as *;
+
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3.125rem;
+    background-color: $bg-color;
+}
+
+.Storefront {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.Storefront_title {
+    font-family: 1.375rem;
+    font-weight: $font-weight-bold;
+    font-size: 1.375rem;
+    line-height: $line-height-md;
+    letter-spacing: $letter-spacing-sm;
+    color: $text-color;
+}
+
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+}

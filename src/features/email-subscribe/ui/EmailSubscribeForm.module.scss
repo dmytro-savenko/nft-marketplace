@@ -1,0 +1,12 @@
+.Form {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 26.25rem;
+    height: 3.75rem;
+}
+
+.Button {
+    position: absolute;
+    right: 0;
+}

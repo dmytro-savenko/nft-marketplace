@@ -1,0 +1,104 @@
+@use "../../../app/styles/variables" as *;
+@use "../../../app/styles/fonts" as *;
+
+.Footer {
+    display: flex;
+    gap: 1.875rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2.5rem 12.1875rem;
+    background-color: $footer-bg-color;
+}
+
+.Container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.Marketplace {
+    display: flex;
+    flex-direction: column;
+    width: 20.4375rem;
+    padding-right: 5.25rem;
+    gap: 1.875rem;
+}
+
+.Marketplace_logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.Footer_title {
+    font-family: $font-family-space-mono;
+    font-weight: $font-weight-bold;
+    font-size: 22px;
+    line-height: $line-height-md;
+    letter-spacing: $letter-spacing-sm;
+    color: $text-color;
+}
+
+.Footer_info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.Market_community {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem;
+}
+
+.Footer_text {
+    font-family: $font-family-work-sans;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+    line-height: $line-height-sm-base;
+    letter-spacing: $letter-spacing-sm;
+    color: $secondary-text-color;
+}
+
+.Footer_icons {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.Explore {
+    width: 15rem;
+    flex-direction: column;
+    display: flex;
+    gap: 1.5625rem;
+}
+
+.Join {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+}
+
+.Subscribe_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.Company {
+    width: 65.5625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.Company_sign {
+    font-family: $font-family-work-sans;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xs;
+    line-height: 1.1;
+    color: $secondary-text-color;
+}

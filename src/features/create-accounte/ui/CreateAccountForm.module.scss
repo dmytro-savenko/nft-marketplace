@@ -3,4 +3,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 1.875rem;
+    width: 20.625rem;
+}
+
+.Inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.9375rem;
+}
+
+.Button_wrapper {
+    width: 100%;
 }

@@ -1,5 +1,13 @@
+import Layout from "./layout/Layout";
+import Main from "../widgets/Main/ui/Main";
+import "../app/styles/_reset.scss";
+
 function App() {
-    return <title></title>;
+    return (
+        <Layout>
+            <Main />
+        </Layout>
+    );
 }
 
 export default App;
